@@ -1,0 +1,5 @@
+Implementation of the fundamental functions of 
+RBO Bit-reversal Scheduling
+in Go Programming Language.
+
+(See: https://sites.google.com/site/rboprotocol/ )
