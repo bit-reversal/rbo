@@ -57,10 +57,9 @@ func NSI(k uint8, t uint64, r1 uint64, r2 uint64) uint64 {
 		stepDivMask = ((^stepLMinusOne) & modMaskK)
 		x1 = RevBits(k, t1)
 		x2 = (x1 | stepDivMask)
-		if r1 > x2 || r2 < x1 || ((r1-x1+stepLMinusOne)&stepDivMask) > ((r2-x1)&stepDivMask) {
-			continue
+		if r1 <= x2 && x1 <= r2 && ((r1-x1+stepLMinusOne)&stepDivMask) <= ((r2-x1)&stepDivMask) {
+			break
 		}
-		break
 	}
 	var s uint64 = (twoToK >> 1) // 2^(k-1)
 	for x1 < r1 || x1 > r2 {
@@ -74,3 +73,4 @@ func NSI(k uint8, t uint64, r1 uint64, r2 uint64) uint64 {
 	}
 	return RevBits(k, x1)
 }
+

@@ -1,6 +1,9 @@
 package rbo
 
-import "testing"
+import(
+ "testing"
+ "fmt"
+)
 
 // Returns (t+min{d>0 : r1<= RevBits( (t+d)mod 2^k   ) <=r2}) mod 2^k,
 // which is the next wake-up time slot modulo 2^k after t for the RBO receiver if the values of lb and ub are r1 and r2, respectively.
@@ -19,9 +22,10 @@ func naiveNSI(k uint8, t uint64, r1 uint64, r2 uint64) uint64 {
 
 func TestNSI(test *testing.T) {
 
-	const kMax uint8 = 7
+	const kMax uint8 = 9
 
 	for k := uint8(1); k <= kMax; k++ {
+                fmt.Printf("k = %v\n", k)
 		twoToK := uint64(1 << k)
 		for t := uint64(0); t < twoToK; t++ {
 			for r1 := uint64(0); r1 < twoToK; r1++ {
