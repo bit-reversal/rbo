@@ -7,4 +7,6 @@ See: https://sites.google.com/site/rboprotocol/
 The algorithm underlying the implementation of NSI is explained in 
 https://sites.google.com/site/rboprotocol/rbo-files/mki-RBO-gamma.pdf  (In section: "Implementation").
 
-GitHub Page: http://mki1967.github.io/rbo/
+GitHub Page: https://mki1967.github.io/rbo/
+
+godoc: https://godoc.org/github.com/mki1967/rbo
