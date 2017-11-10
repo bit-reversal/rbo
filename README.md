@@ -1,4 +1,4 @@
-# RBO (Bit reversal broadcast scheduling)
+# RBO (Bit reversal broadcast scheduling) [![Build Status](https://travis-ci.org/mki1967/rbo.svg?branch=master)](https://travis-ci.org/mki1967/rbo.svg?branch=master)
 
 Implementation of the fundamental functions of 
 RBO Bit-reversal Scheduling
